@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #191919;
+  }
+  #main{
+    height: 100vh;
+    width: 100vw;
+  }
+  #navbar{
+    height: 10vh ;
+    width: 100vw;
+    box-shadow: 0 8px 8px -4px black;
+    border-bottom: 0.1px solid rgba(240, 248, 255, 0.233);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #nav-left{
+    display: flex;
+    align-items: center;
+  }
+  #logo{
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+  }
+  #hamburger{
+    display: none;
+  }
+  #nav-left img{
+    height: 40px;
+    width: 40px;
+  }
+  #nav-left h1{
+    font-family: 'Rajdhani', sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  #navlinks {
+     display: flex;
+     gap: 3vw;
+
+  }
+  #navlinks a{
+     text-decoration: none;
+     color: rgba(240, 248, 255, 0.603);
+     
+  }
+  #navlinks a:hover{
+    
+     color: rgb(240, 248, 255);
+     
+  }
+  #nav-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #nav-btn{
+    
+    border-radius: 8px;
+    background-color: #32be8b ;
+    color: aliceblue;
+    border: 1px solid #32be8b;
+  }
+  .nav-btn{
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid aliceblue;
+    background-color: transparent;
+    color: aliceblue;
+  }
+  @media (max-width:1160px) {
+    #navlinks {
+      display: flex;
+      gap: 1.5vw;
+ 
+   }
+  }
+  @media (max-width:1020px) {
+    #navlinks {
+      display: flex;
+      gap: 1vw;
+ 
+   }
+   
+  }
+  @media (max-width:970px) {
+    #navlinks {
+      display: none;
+    }
+    #hamburger{
+      display: block;
+      padding-right: 20px;
+    }
+    #hamburger button{
+      font-size: 25px;
+      color: white;
+    }
+    #offcanvasScrolling{
+      background-color: #191919;
+      color: white;
+      padding-left: 20px;
+    }
+    #resp-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 30px;
+      margin-top: -25px;
+    }
+    .list-group{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .list-group li{
+       list-style: none;
+       font-size: 20px;
+
+    }
+    #walletbtn{
+      font-size: 10px;
+      
+    }
+  }
+
+  #footer{
+    height:fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+  #footer img{
+    height: 45px;
+    width: 45px;
+  }
+  #footer h1{
+    font-family: 'Rajdhani', sans-serif;
+    color: aliceblue;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  #socials{
+    display: flex;
+    gap: 50px;
+    color: rgba(240, 248, 255, 0.582);
+  }
+  #socials i{
+    font-size: 35px;
+  }
+  #socials i:hover{
+    color: rgb(240, 248, 255);
+  }
+  #footer-links{
+    display: flex;
+    gap: 20px;
+  }
+  #footer-links a{
+   text-decoration: none;
+   color: aliceblue;
+  }
+  #page-1{
+    padding-left: 100px;
+    padding-top: 50px;
+    color: aliceblue;
+  }
+  #page-1 h6{
+   color: rgba(240, 248, 255, 0.473);
+  }
+  #table-part1{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    padding-bottom: 40px;
+  }
+  .table-p1{
+    width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    padding: 10px 25px;
+    border-radius: 10px;
+    
+  }
+  .table-p1-head{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+  }
+  .table-p1-content{
+    margin-top: 20px;
+  }
+  .table-p1-content>div{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
+  #table2{
+    margin-top: 50px;
+  }
+  button{
+    border-radius: 8px;
+    background-color: #32be8b ;
+    color: aliceblue;
+    border: 1px solid #32be8b;
+    padding: 7px 25px;
+    width: fit-content;
+    margin-top: 15px;
+  }
+  @media (max-width:980px) {
+    #table-part1{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    #tables-2{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  @media (max-width:540px) {
+    #page-1{
+      padding-left: 10px;
+      padding-top: 50px;
+      color: aliceblue;
+    }
+    #tables-2{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #table-part1{
+      display: flex;
+      gap: 10px;
+      margin-top: 50px;
+      padding-bottom: 40px;
+      gap: 30px;
+    }
+    .table-p1{
+      width: 350px;
+      border: 1px solid rgba(255, 255, 255, 0.363);
+      padding: 10px 25px;
+      border-radius: 10px;
+      
+    }
+    .table-p1-head{
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+    }
+    .table-p1-content{
+      margin-top: 20px;
+    }
+    .table-p1-content>div{
+      display: flex;
+      margin-top: 5px;
+      justify-content: space-between;
+    }
+  }

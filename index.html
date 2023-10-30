@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Romi || Decentralized Perpetual Exchange </title>
+    <link rel="icon" type="image/x-icon" href="./images/logo_white.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="nav-left">
+                <div id="hamburger">
+                    <!-- <i class="fa-solid fa-bars"></i> -->
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header" id="ham-close">
+
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div id="resp-logo">
+                                <img src="./images/logo_white.jpg" alt="">
+                                <h1>Romi Finance</h1>
+                            </div>
+                            <ul class="list-group">
+
+                                <a href="index.html">Home</a>
+                                
+                                <a href="dashboard.html">Dashboard</a>
+                                
+                                <li>NFT</li>
+                                
+                                <a href="earn.html">Earn</a>
+                                <li>Buy</li>
+                                <li>Refferals</li>
+                                <li>Ecosystem</li>
+                                <li>About</li>
+                                <li>Settings</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="logo">
+                    <img src="./images/logo_white.jpg" alt="">
+                    <h1>Romi Finance</h1>
+                </div>
+            </div>
+            <div id="nav-mid">
+                <div id="navlinks">
+                    <a href="index.html">Home</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="">NFT</a>
+                    <a href="earn.html">Earn</a>
+                    <a href="">Buy</a>
+                    <a href="">Refferals</a>
+                    <a href="">Ecosystem</a>
+                    <a href="">About</a>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <button class="nav-btn" id="nav-btn">Trade</button>
+                <!-- Button trigger modal -->
+                <button type="button" id="walletbtn" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="color: aliceblue; border: 1px solid aliceblue;">
+                    <i class="ri-wallet-line" style="padding: 0px 5px;"></i> Connect Wallet
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-brands fa-ethereum" style="padding-right: 10px;border-right: 2px solid white;"></i>
+
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Ethereum</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Language</a></li>
+                    </ul>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" style="background-color:#191919;color: aliceblue;">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Connect Wallet</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"
+                                style="display: flex; gap: 15px; flex-direction: column; color: aliceblue;">
+                                <div id="metamask">
+
+                                    <button type="button" class="btn " id="liveToastBtn"
+                                        style="border: 1px solid black; color: aliceblue;"><img
+                                            src="/images/metamask.4b5d438a.png" style="height:30px; padding-right:30px "
+                                            alt="">MetaMask</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">Metatask wallet not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install MetaMask to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="coinbase">
+
+                                    <button type="button" class="btn " id="liveToastBtn2"
+                                        style="border: 1px solid black;color: aliceblue;"><img
+                                            src="/images/coinbaseWallet.ae86a337.png"
+                                            style="height:30px; padding-right:30px " alt="">CoinBase Wallet</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast2" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">Coinbase Wallet not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install Coinbase Wallet to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="walletconnect">
+
+                                    <button type="button" class="btn " id="liveToastBtn3"
+                                        style="border: 1px solid black; color: aliceblue;"><img
+                                            src="/images/coinbaseWallet.ae86a337.png"
+                                            style="height:30px; padding-right:30px " alt="">WalletConnect</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast3" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">WalletConnect not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install WalletConnect to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-1">
+            <h1>Decentralized<br>Perpetual Exchange</h1>
+            <p>Trade BTC, ETH, AVAX and other top <br>cryptocurrencies with up to 30x
+                leverage <br>directly from your wallet</p>
+            <button>Launch Exchange</button>
+            <div id="p1-boxes">
+                <div class="box-1" id="box1">
+                    <div class="box-l"><img src="https://zomi.finance/static/media/ic_trading.2c53815a.svg" alt=""
+                            srcset=""></div>
+                    <div class="box-r">
+                        <h8>Total Trading Volume</h8>
+                        <h3>$0</h3>
+                    </div>
+                </div>
+                <div class="box-1" id="box2">
+                    <div class="box-l"><img src="https://zomi.finance/static/media/ic_stats.f0a18011.svg" alt=""
+                            srcset=""></div>
+                    <div class="box-r">
+                        <h8>Open Interest</h8>
+                        <h3>$0</h3>
+                    </div>
+                </div>
+                <div class="box-1" id="box3">
+                    <div class="box-l"><img src="https://zomi.finance/static/media/ic_stats.f0a18011.svg" alt=""
+                            srcset=""></div>
+                    <div class="box-r">
+                        <h8>Total Users</h8>
+                        <h3>$0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-2">
+            <div id="p2-boxes">
+                <div class="box2">
+                    <div class="box2-head">
+                        <img src="https://zomi.finance/static/media/ic_liquidity.505b3f30.svg" alt="">
+                        <h5>Reduce Liquidation Risks</h5>
+                    </div>
+                    <p>An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions
+                        safe from temporary wicks.</p>
+                </div>
+                <div class="box2">
+                    <div class="box2-head">
+                        <img src="https://zomi.finance/static/media/ic_cost.b4a729d3.svg" alt="">
+                        <h5>Save on Costs</h5>
+                    </div>
+                    <p>Enter and exit positions with minimal spread and zero price impact. Get the optimal price without
+                        incurring additional costs.</p>
+                </div>
+                <div class="box2">
+                    <div class="box2-head">
+                        <img src="https://zomi.finance/static/media/ic_simpleswaps.2005009f.svg" alt="">
+                        <h5>Simple Swaps</h5>
+                    </div>
+                    <p>Open positions through a simple swap interface. Conveniently swap from any supported asset into
+                        the position of your choice.</p>
+                </div>
+            </div>
+
+            <div id="p2-content">
+                <h1>Two tokens create<br> our ecosystem</h1>
+                <div id="boxes-content2">
+                    <div class="box-content2">
+                        <div class="box-content2-head">
+                            <img src="/images/download.png" alt="">
+                            <h3>$ROMI</h3>
+                        </div>
+                        <h5>$ROMI is the utility and governance token. Accrues 30% of the platform's generated fees.
+                        </h5>
+                        <h7>Ethereum APR: 0.00%</h7>
+                        <div class="box-content2-btn">
+                            <button>Buy</button>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                    <div class="box-content2">
+                        <div class="box-content2-head">
+                            <img src="/images/download (1).png" alt="">
+                            <h3>$ZLP</h3>
+                        </div>
+                        <h5>$ZLP is the liquidity provider token. Accrues 70% of the platform's generated fees.
+                        </h5>
+                        <h7>Ethereum APR: 1,650,546,938.34%</h7>
+                        <div class="box-content2-btn">
+                            <button>Buy</button>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="logo">
+                <img src="./images/logo_white.jpg" alt="">
+                <h1>Romi Finance</h1>
+            </div>
+            <div id="socials">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-medium"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div id="footer-links">
+                <a href="">Terms and Conditions</a>
+                <a href="">Referral Terms</a>
+                <a href="">Media Kit</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

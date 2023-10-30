@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Romi || Decentralized Perpetual Exchange </title>
+    <link rel="icon" type="image/x-icon" href="./images/logo_white.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="nav-left">
+                <div id="hamburger">
+                    <!-- <i class="fa-solid fa-bars"></i> -->
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header" id="ham-close">
+
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div id="resp-logo">
+                                <img src="./images/logo_white.jpg" alt="">
+                                <h1>Romi Finance</h1>
+                            </div>
+                            <ul class="list-group">
+
+                                <a href="index.html">Home</a>
+
+                                <a href="dashboard.html">Dashboard</a>
+
+                                <li>NFT</li>
+
+                                <a href="earn.html">Earn</a>
+                                <li>Buy</li>
+                                <li>Refferals</li>
+                                <li>Ecosystem</li>
+                                <li>About</li>
+                                <li>Settings</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="logo">
+                    <img src="./images/logo_white.jpg" alt="">
+                    <h1>Romi Finance</h1>
+                </div>
+            </div>
+            <div id="nav-mid">
+                <div id="navlinks">
+                    <a href="index.html">Home</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="">NFT</a>
+                    <a href="earn.html">Earn</a>
+                    <a href="">Buy</a>
+                    <a href="">Refferals</a>
+                    <a href="">Ecosystem</a>
+                    <a href="">About</a>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <button class="nav-btn" id="nav-btn">Trade</button>
+                <!-- Button trigger modal -->
+                <button type="button" id="walletbtn" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="color: aliceblue; border: 1px solid aliceblue;">
+                    <i class="ri-wallet-line" style="padding: 0px 5px;"></i> Connect Wallet
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-brands fa-ethereum" style="padding-right: 10px;border-right: 2px solid white;"></i>
+
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Ethereum</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Language</a></li>
+                    </ul>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" style="background-color:#191919;color: aliceblue;">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Connect Wallet</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"
+                                style="display: flex; gap: 15px; flex-direction: column; color: aliceblue;">
+                                <div id="metamask">
+
+                                    <button type="button" class="btn " id="liveToastBtn"
+                                        style="border: 1px solid black; color: aliceblue;"><img
+                                            src="/images/metamask.4b5d438a.png" style="height:30px; padding-right:30px "
+                                            alt="">MetaMask</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">Metatask wallet not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install MetaMask to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="coinbase">
+
+                                    <button type="button" class="btn " id="liveToastBtn2"
+                                        style="border: 1px solid black;color: aliceblue;"><img
+                                            src="/images/coinbaseWallet.ae86a337.png"
+                                            style="height:30px; padding-right:30px " alt="">CoinBase Wallet</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast2" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">Coinbase Wallet not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install Coinbase Wallet to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="walletconnect">
+
+                                    <button type="button" class="btn " id="liveToastBtn3"
+                                        style="border: 1px solid black; color: aliceblue;"><img
+                                            src="/images/coinbaseWallet.ae86a337.png"
+                                            style="height:30px; padding-right:30px " alt="">WalletConnect</button>
+
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                        <div id="liveToast3" class="toast" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-header">
+
+                                                <strong class="me-auto">WalletConnect not detected </strong>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="toast-body" style="color: #191919;">
+                                                Install WalletConnect to start using $ROMI
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-1">
+            <h1>Stats <i class="fa-brands fa-ethereum"></i></h1>
+            <h6>
+                Ethereum Total Stats start from 06 Jan 2022.
+
+                <br>
+                For detailed stats
+            </h6>
+            <div id="table-part1">
+                <div class="table-p1">
+                    <div class="table-p1-head">
+                        <h7>Overview</h7>
+
+                    </div>
+                    <div class="table-p1-content">
+                        <div>
+                            <h7>AUM</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>$ZLP Pool</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>24h Volume</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>Long Positions</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>Short Positions</h7>
+                            <h7>$33</h7>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-p1">
+                    <div class="table-p1-head">
+                        <h7>Total Stats</h7>
+
+                    </div>
+                    <div class="table-p1-content">
+                        <div>
+                            <h7>Total Fees</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>Total Volume</h7>
+                            <h7>$33</h7>
+                        </div>
+                        <div>
+                            <h7>Floor Price Fund</h7>
+                            <h7>$618,905</h7>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <h1>Tokens <i class="fa-brands fa-ethereum"></i></h1>
+            <h6>
+                Platform and $ZLP index tokens.
+            </h6>
+            <div id="tables-2">
+                <div class="table-p1" id="table2">
+                    <div class="table-p1-head">
+                        <h7>$ZLP Index Composition</h7>
+
+
+                    </div>
+                    <div id="tables-2">
+                        <div id="p2-c">
+                            <div class="table-p1-content">
+                                <div>
+                                    <h7>Ethereum</h7>
+                                    <h7>$1,763.36</h7>
+                                </div>
+                                <div>
+                                    <h7>Wrapped Bitcoin</h7>
+                                    <h7>$33,722.43</h7>
+                                </div>
+                                <div>
+                                    <h7>ApeCoin</h7>
+                                    <h7>$1.27</h7>
+                                </div>
+                                <div>
+                                    <h7>USD Coin</h7>
+                                    <h7>$1.00</h7>
+                                </div>
+
+                            </div>
+                            <div id="chart1">
+                                <svg cx="50%" cy="50%" class="recharts-surface" width="210" height="210"
+                                    viewBox="0 0 210 210" version="1.1">
+                                    <defs>
+                                        <clipPath id="recharts1-clip">
+                                            <rect x="5" y="5" height="200" width="200"></rect>
+                                        </clipPath>
+                                    </defs>
+                                    <g class="recharts-layer recharts-pie">
+                                        <g class="recharts-layer recharts-pie-sector">
+                                            <path name="in liquidity" cx="105" cy="105" fill="#0598fa" stroke="#0598fa"
+                                                color="#0598fa" stroke-width="1" class="recharts-sector" d="M 105,25
+                        A 80,80,0,
+                        1,1,
+                        70.73564944631276,32.70923792673068
+                      L 73.7337801197604,39.034679608141744
+                                A 73,73,0,
+                                1,0,
+                                105,32 Z" style="filter: none; cursor: pointer;"></path>
+                                        </g>
+                                        <g class="recharts-layer recharts-pie-sector">
+                                            <path name="not staked" cx="105" cy="105" fill="#5c0af5" stroke="#5c0af5"
+                                                color="#5c0af5" stroke-width="1" class="recharts-sector" d="M 73.27943357547562,31.557466916592972
+                        A 80,80,0,
+                        0,1,
+                        102.20804026379994,25.048733838472344
+                      L 102.45233674071744,32.044469627606006
+                                A 73,73,0,
+                                0,0,
+                                76.0549831376215,37.98368856139108 Z" style="filter: none; cursor: pointer;"></path>
+                                        </g>
+                                        <g class="recharts-layer recharts-pie-sector"></g>
+                                    </g><text x="50%" y="50%" fill="white" text-anchor="middle"
+                                        dominant-baseline="middle">Distribution</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-p1" id="table2">
+                    <div class="table-p1-head">
+                        <h7>$ZLP Index Composition</h7>
+
+
+                    </div>
+                    <div id="tables-2">
+                        <div id="p2-c">
+                            <div class="table-p1-content">
+                                <div>
+                                    <h7>Ethereum</h7>
+                                    <h7>$1,763.36</h7>
+                                </div>
+                                <div>
+                                    <h7>Wrapped Bitcoin</h7>
+                                    <h7>$33,722.43</h7>
+                                </div>
+                                <div>
+                                    <h7>ApeCoin</h7>
+                                    <h7>$1.27</h7>
+                                </div>
+                                <div>
+                                    <h7>USD Coin</h7>
+                                    <h7>$1.00</h7>
+                                </div>
+
+                            </div>
+                            <div id="chart1">
+                                <svg cx="50%" cy="50%" class="recharts-surface" width="210" height="210"
+                                    viewBox="0 0 210 210" version="1.1">
+                                    <defs>
+                                        <clipPath id="recharts3-clip">
+                                            <rect x="5" y="5" height="200" width="200"></rect>
+                                        </clipPath>
+                                    </defs>
+                                    <g class="recharts-layer recharts-pie">
+                                        <g class="recharts-layer recharts-pie-sector">
+                                            <path name="ETH" cx="105" cy="105" fill="#6062a6" stroke="#6062a6"
+                                                stroke-width="1" class="recharts-sector" d="M 105,25
+                            A 80,80,0,
+                            0,1,
+                            105.33178441162497,184.9993119914428
+                          L 105.30275327560778,177.99937219219154
+                                    A 73,73,0,
+                                    0,0,
+                                    105,32 Z" style="filter: none; cursor: pointer;"></path>
+                                        </g>
+                                        <g class="recharts-layer recharts-pie-sector">
+                                            <path name="USDC" cx="105" cy="105" fill="#2775CA" stroke="#2775CA"
+                                                stroke-width="1" class="recharts-sector" d="M 102.5396465724782,184.96215768106612
+                            A 80,80,0,
+                            0,1,
+                            102.20804026379994,25.048733838472344
+                          L 102.45233674071744,32.044469627606006
+                                    A 73,73,0,
+                                    0,0,
+                                    102.75492749738636,177.96546888397285 Z" style="filter: none; cursor: pointer;">
+                                            </path>
+                                        </g>
+                                        <g class="recharts-layer recharts-pie-sector"></g>
+                                        <g class="recharts-layer recharts-pie-sector"></g>
+                                    </g><text x="50%" y="50%" fill="white" text-anchor="middle"
+                                        dominant-baseline="middle">$ZLP Pool</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="footer">
+            <div id="logo">
+                <img src="./images/logo_white.jpg" alt="">
+                <h1>Romi Finance</h1>
+            </div>
+            <div id="socials">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-medium"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div id="footer-links">
+                <a href="">Terms and Conditions</a>
+                <a href="">Referral Terms</a>
+                <a href="">Media Kit</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
